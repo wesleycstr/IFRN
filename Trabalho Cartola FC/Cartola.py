@@ -1,6 +1,5 @@
 import json, sys
 
-############################################################################################################
 dados_cartola = open('C:/Users/administrator/Desktop/Trabalho Cartola FC/dados_cartola.json', 'r', encoding='utf8', errors='ignore')
 cartola_json = json.loads(dados_cartola.read())
 
@@ -79,7 +78,6 @@ melhores_tecnicos = list()
 pontos_tecnicos = list()
 times_tecnicos = list()
 
-
 for i in range(5):
         pontos_goleiros.append(max(goleiros_pontos))
         melhores_goleiros.append(goleiros[goleiros_pontos.index(max(goleiros_pontos))])
@@ -111,54 +109,145 @@ for i in range(5):
         times_tecnicos.append(tecnicos_clubes[tecnicos_pontos.index(max(tecnicos_pontos))])
         tecnicos_pontos.remove(max(tecnicos_pontos))
 
-print (melhores_goleiros)
-print (pontos_goleiros)
-print (times_goleiros)
-print()
-print (melhores_laterais)
-print (pontos_laterais)
-print (times_laterais)
-print()
-print (melhores_atacantes)
-print (pontos_atacantes)
-print (times_atacantes)
-print()
-print (melhores_zagueiros)
-print (pontos_zagueiros)
-print (times_zagueiros)
-print()
-print (melhores_meias)
-print (pontos_meias)
-print (times_meias)
-print()
-print (melhores_tecnicos)
-print (pontos_tecnicos)
-print (times_tecnicos)
-
-
-###################################################################################################################
-'''
-while true:
-        try:
-                print ('Escolha o esquema tático desejado:')
-                print('1: 5-4-1')
-                print('2: 5-3-2')
-                print('3: 4-5-1')
-                print('4: 4-4-2')
-                print('5: 4-3-3')
-                print('6: 5-3-2')
-                print('7: 3-4-3')
+#Menu com as opções de esquema tático
+while True:
+        print()
+        print ('Escolha o esquema tático desejado (Digite (0) para encerrar:')
+        print('1: 5-4-1')
+        print('2: 5-3-2')
+        print('3: 4-5-1')
+        print('4: 4-4-2')
+        print('5: 4-3-3')
+        print('6: 5-3-2')
+        print('7: 3-4-3')
+        print()
+        opção = input('>>> ')
+        if opção == '1':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 5-4-1:')
                 print()
-                opção = input('>>> ')
-                if opção == 1:
-                        for i in range
-                if opção == 2:
-                if opção == 3:
-                if opção == 4:
-                if opção == 5:
-                if opção == 6:
-                if opção == 7:
-                else: continue
-        except:
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[2], times_laterais[2], pontos_laterais[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[3], times_laterais[3], pontos_laterais[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[3], times_meias[3], pontos_meias[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[4], times_meias[4], pontos_meias[4]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[0], times_atacantes[0], pontos_atacantes[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
                 continue
-'''
+        if opção == '2':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 5-3-2:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[2], times_zagueiros[2], pontos_zagueiros[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[0], times_laterais[0], pontos_laterais[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[1], times_laterais[1], pontos_laterais[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '3':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 4-5-1:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[0], times_laterais[0], pontos_laterais[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[1], times_laterais[1], pontos_laterais[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_zagueiros[3], times_zagueiros[3], pontos_zagueiros[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[4], times_meias[4], pontos_meias[4]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '4':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 4-4-2:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[2], times_zagueiros[2], pontos_zagueiros[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[3], times_zagueiros[3], pontos_zagueiros[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[3], times_meias[3], pontos_meias[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[0], times_atacantes[0], pontos_atacantes[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '5':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 4-3-3:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[2], times_zagueiros[2], pontos_zagueiros[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[3], times_zagueiros[3], pontos_zagueiros[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[0], times_atacantes[0], pontos_atacantes[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[2], times_atacantes[2], pontos_atacantes[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '6':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 5-3-2:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[2], times_zagueiros[2], pontos_zagueiros[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[0], times_laterais[0], pontos_laterais[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Lateral', melhores_laterais[1], times_laterais[1], pontos_laterais[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[0], times_atacantes[0], pontos_atacantes[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '7':
+                print ('MELHORES JOGADORES PARA O ESQUEMA TÁTICO 3-4-3:')
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('POSIÇÃO ','NOME','TIME','PONTUAÇÃO'))
+                print()
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Goleiro', melhores_goleiros[0], times_goleiros[0], pontos_goleiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[0], times_zagueiros[0], pontos_zagueiros[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[1], times_zagueiros[1], pontos_zagueiros[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Zagueiro', melhores_zagueiros[2], times_zagueiros[2], pontos_zagueiros[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[0], times_meias[0], pontos_meias[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[1], times_meias[1], pontos_meias[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[2], times_meias[2], pontos_meias[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Meia', melhores_meias[3], times_meias[3], pontos_meias[3]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[0], times_atacantes[0], pontos_atacantes[0]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[1], times_atacantes[1], pontos_atacantes[1]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Atacante', melhores_atacantes[2], times_atacantes[2], pontos_atacantes[2]))
+                print('{:<10}{:<20}{:<15}{:<10}'.format('Técnico', melhores_tecnicos[0], times_tecnicos[0], pontos_tecnicos[0] ))
+                continue
+        if opção == '0':
+                break
+        else: continue
